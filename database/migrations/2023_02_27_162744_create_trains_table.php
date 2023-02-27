@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('station_departure_id');
             $table->string('company', 15);
             $table->tinyInteger('binary')->unsigned();
             $table->string('station_departure', 50);
